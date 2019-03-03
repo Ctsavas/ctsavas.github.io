@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Plain load with precconect</title>
+	<link rel="precconect" href="font-lato/lato-subset-optimized.woff2" as="font" type="font/woff2" crossorigin>
+	<style>
+	@font-face {
+		font-family: Lato;
+		src: url('font-lato/lato-regular-webfont.woff2') format('woff2'),
+				 url('font-lato/lato-regular-webfont.woff') format('woff');
+		 font-display: swap;
+	}
+	body {
+		font-family: Lato, sans-serif;
+	}
+	</style>
+</head>
+<body>
+	<h1>Plain load with &lt;link /&gt; and precconect</h1>
+	<p>This is a paragraph. <strong>This is heavier text.</strong> <em>This is emphasized text.</em> <strong><em>This is heavier and emphasized text.</em></strong></p>
+	<p style="font-family:sans-serif">System font text</p>
+</body>
+</html>
