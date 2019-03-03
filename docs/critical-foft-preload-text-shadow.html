@@ -11,27 +11,23 @@
 		src: url('font-lato/lato-subset-optimized.woff2') format('woff2'),
 				 url('font-lato/lato-subset-optimized.woff') format('woff');
 		unicode-range: U+65-90, U+97-122;
-		font-display: swap;
 	}
 	@font-face {
 		font-family: Lato;
 		src: url('font-lato/lato-regular-webfont.woff2') format('woff2'),
 				 url('font-lato/lato-regular-webfont.woff') format('woff');
-		font-display: swap;
 	}
 	@font-face {
 		font-family: Lato;
 		src: url('font-lato/lato-bold-webfont.woff2') format('woff2'),
 				 url('font-lato/lato-bold-webfont.woff') format('woff');
 		font-weight: 700;
-		font-display: swap;
 	}
 	@font-face {
 		font-family: Lato;
 		src: url('font-lato/lato-italic-webfont.woff2') format('woff2'),
 				 url('font-lato/lato-italic-webfont.woff') format('woff');
 		font-style: italic;
-		font-display: swap;
 	}
 	@font-face {
 		font-family: Lato;
@@ -39,11 +35,10 @@
 				 url('font-lato/lato-bolditalic-webfont.woff') format('woff');
 		font-weight: 700;
 		font-style: italic;
-		font-display: swap;
 	}
 
 	body {
-		font-family: Lato, LatoSubset, -apple-system, 
+		font-family: -apple-system, 
                 BlinkMacSystemFont, 
                 "Segoe UI", 
                 Roboto, 
@@ -68,6 +63,14 @@
 	.fonts-loaded-2 strong {
 			text-shadow: none;
 			font-weight: bold;
+	}
+
+	.fonts-loaded-1 body {
+		font-family: LatoSubset;
+	}
+
+	.fonts-loaded-2 body {
+		font-family: Lato;
 	}
 	</style>
 	<script>
