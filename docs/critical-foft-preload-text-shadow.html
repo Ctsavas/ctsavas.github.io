@@ -11,6 +11,7 @@
 		src: url('font-lato/lato-subset-optimized.woff2') format('woff2'),
 				 url('font-lato/lato-subset-optimized.woff') format('woff');
 		unicode-range: U+0031-0039, U+0041-005A, U+0061-007A; /*numbers*/
+		font-display: swap;
 	}
 	@font-face {
 		font-family: Lato;
@@ -38,7 +39,7 @@
 	}
 
 	body {
-		font-family: -apple-system, 
+		font-family: LatoSubset, -apple-system, 
                 BlinkMacSystemFont, 
                 "Segoe UI", 
                 Roboto, 
@@ -82,7 +83,9 @@
 				return;
 			}
 
-			window.onload = function () {
+			document.fonts.load("1em LatoSubset").then(function () {
+				document.documentElement.className += " fonts-loaded-1";
+
 				Promise.all([
 				document.fonts.load("400 1em Lato"),
 				document.fonts.load("700 1em Lato"),
@@ -94,10 +97,6 @@
 				// Optimization for Repeat Views
 				sessionStorage.fontsLoaded = true;
 			});
-			};
-
-			document.fonts.load("1em LatoSubset").then(function () {
-				document.documentElement.className += " fonts-loaded-1";
 			});
 		}
 	})();
